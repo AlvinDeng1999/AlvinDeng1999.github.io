@@ -9,8 +9,8 @@ function App() {
 
 	return (
 		<>
-			<div id="left">
-				<Header></Header>
+			<div>
+				<Header />
 			</div>
 			<div>
 				<a href="https://vitejs.dev" target="_blank">
@@ -23,11 +23,11 @@ function App() {
 			<h1>Vite + React</h1>
 			<div className="card">
 				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
+					Count is {count}
 				</button>
 			</div>
 			<p className="read-the-docs">
-				Placeholder text
+				~Spin~
 			</p>
 		</>
 	)
