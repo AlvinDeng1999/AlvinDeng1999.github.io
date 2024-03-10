@@ -1,34 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './Components/Header.tsx'
+import Header from './Components/Header/Header.tsx'
+import Demo from './Components/Demo/Demo.tsx'
+import NavBar from './Components/NavBar/NavBar.tsx'
+import { Route, Routes } from 'react-router-dom'
+import Yuumi from './Components/Yuumi/Yuumi.tsx'
 
 function App() {
-	const [count, setCount] = useState(0)
 
 	return (
 		<>
 			<div>
 				<Header />
+				<NavBar />
+					<Routes>
+						<Route path="/" element={<Demo />} />
+						<Route path="/yuumi" element={<Yuumi />} />
+					</Routes>
 			</div>
-			<div>
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					Count is {count}
-				</button>
-			</div>
-			<p className="read-the-docs">
-				~Spin~
-			</p>
 		</>
 	)
 }
