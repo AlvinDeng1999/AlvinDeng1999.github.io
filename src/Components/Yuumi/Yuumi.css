@@ -1,8 +1,8 @@
-.yooms {
+.yuumi {
 	will-change: filter;
 	transition: filter 300ms;
 }
-.yooms:hover {
+.yuumi:hover {
 	filter: drop-shadow(0 0 .2em #9697acaa);
 }
 
@@ -17,10 +17,7 @@
 
 
 @media (prefers-reduced-motion: no-preference) {
-	h1:nth-of-type(1) .yooms {
+	.yuumi:hover {
 		animation: yooms-spin infinite 20s linear;
-	}
-	h1:nth-of-type(1) .yooms.counter {
-		animation: yooms-spin reverse infinite 20s linear;
 	}
 }
